@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gitwell</title>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/11.3.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/11.3.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/11.3.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/11.3.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/11.3.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/11.3.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/11.3.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/11.3.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/11.3.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/11.3.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Git Well</h1>
+        <div class="habit-overview">
+            <table>
+                <tbody id="habit-table">
+                </tbody>
+            </table>           
+        </div>
+        <button id="pushBtn">Push Habit</button>
+        <div class="modal" id="modal">
+            <div class="modal-inner">
+                <div id="modal-date"></div> 
+                <textarea class="textarea" placeholder="Journal about your habit"></textarea>
+                <button id="closeModal">X</button>
+                <button id="pushHabit">Push Habit</button> 
+            </div>
+        </div> ``
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
