@@ -15,6 +15,24 @@ svg {
     margin: 0;
 }
 
+.journalContainer {
+    background-color: #4c555f;
+    border-radius: 10px;
+    line-height: 1.5; 
+    display: flex;
+    margin: auto;
+    padding: 50px;
+    width: 200px;
+}
+
+#outputJournalText {
+    color: #fafbfc;
+    display: block;
+    text-align: left; /* Aligns text to the left */
+    position: inherit; /* Allows precise positioning */
+}
+
+
 .textarea {
     padding: 1em;
     border-radius: 10px;

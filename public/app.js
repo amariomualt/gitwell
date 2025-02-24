@@ -3,7 +3,7 @@ const table = document.getElementById("habit-table");
 const button = document.getElementById("push-button");
 
 const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const months = ["March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 const rows = 7; 
 const cols = 20; 
@@ -78,10 +78,15 @@ for (let i = 0; i < rows; i++) {
 
 const openBtn = document.getElementById("pushBtn");
 const closeBtn = document.getElementById("closeModal");
+const pushHabitBtn = document.getElementById("pushHabit")
 const modal = document.getElementById("modal");
 
 openBtn.addEventListener("click", () => {
     modal.classList.add("open");
+})
+
+pushHabitBtn.addEventListener("click", () => {
+    modal.classList.remove("open");
 })
 
 closeBtn.addEventListener("click", () => {
@@ -95,6 +100,41 @@ function updateDate() {
 }
 
 updateDate();
+
+const inputJournalText = document.getElementById("inputJournalText");
+const outputJournalText = document.getElementById("outputJournalText");
+document.getElementById("pushHabit");
+
+// // Update the output when the "Push Habit" button is clicked
+// pushHabitBtn.addEventListener("click", function () {
+//     outputJournalText.textContent = inputJournalText.value;
+//     document.getElementById("inputJournalText").value = "";
+//     dayCell.setAttribute("backgroundColor", "red")
+// });
+
+let currentRow = 0;
+let currentCol = 0;
+
+pushHabitBtn.addEventListener("click", function () {
+    outputJournalText.textContent = inputJournalText.value;
+    document.getElementById("inputJournalText").value = "";
+
+    // Change the color of one of the rect cells
+    if (currentCol < cols) {
+        rects[currentCol][currentRow].setAttribute("fill", "#a15c5c");
+
+        currentRow++; // Move to the next row
+
+        if (currentRow >= rows) { // If row limit reached, move to next column
+            currentRow = 0;
+            currentCol++;
+        }
+    }
+});
+
+
+
+
 
 // button.addEventListener("click", pushAlert);
 

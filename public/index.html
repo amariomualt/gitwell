@@ -36,11 +36,16 @@
         <div class="modal" id="modal">
             <div class="modal-inner">
                 <div id="modal-date"></div> 
-                <textarea class="textarea" placeholder="Journal about your habit"></textarea>
+                <textarea class="textarea" id="inputJournalText" placeholder="Journal about your habit" maxlength="72"></textarea>
                 <button id="closeModal">X</button>
                 <button id="pushHabit">Push Habit</button> 
             </div>
-        </div> ``
+        </div> 
+        <div class="journalContainer">
+            <p id="outputJournalText">
+                
+            </p>
+        </div>
     </div>
 
     <script src="app.js" defer></script>
